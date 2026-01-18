@@ -7,7 +7,7 @@ import asyncio
 import time
 import hashlib
 from backend.config import config
-from ai_service import ai_service
+from backend.ai_service import ai_service
 
 # Validate configuration
 config.validate()
@@ -188,4 +188,5 @@ async def chat_stream(request: ChatRequest, req: Request):
 if __name__ == "__main__":
     import uvicorn
     uvicorn.run(app, host="0.0.0.0", port=8000)
+
 
