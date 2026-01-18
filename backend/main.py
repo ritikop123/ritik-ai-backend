@@ -6,7 +6,7 @@ from typing import List, Dict, Optional
 import asyncio
 import time
 import hashlib
-from config import config
+from backend.config import config
 from ai_service import ai_service
 
 # Validate configuration
@@ -188,3 +188,4 @@ async def chat_stream(request: ChatRequest, req: Request):
 if __name__ == "__main__":
     import uvicorn
     uvicorn.run(app, host="0.0.0.0", port=8000)
+
